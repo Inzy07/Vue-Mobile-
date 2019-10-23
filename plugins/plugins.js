@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper/dist/ssr'
 import VueLazyload from 'vue-lazyload'
-import vSelect from 'vue-select'
 import VueLightGallery from 'vue-light-gallery'
 import * as VueGoogleMaps from '~/node_modules/vue2-google-maps/src/main'
 Vue.use(VueGoogleMaps, {
@@ -18,5 +17,5 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 Vue.use(VueLightGallery)
-Vue.component('v-select', vSelect)
+
 

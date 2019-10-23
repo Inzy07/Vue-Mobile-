@@ -29,7 +29,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
     "@nuxtjs/google-gtag",
-    "@nuxtjs/redirect-module"
+    "@nuxtjs/redirect-module",
+    'nuxt-onsenui-module'
   ],
 
   axios: {
@@ -41,10 +42,6 @@ export default {
     { src: '~/plugins/filters', ssr: true },
     { src: '~/plugins/plugins.js', ssr: false },
     { src: "~/plugins/tracking.js", ssr: false }
-  ],
-  // some third party css
-  css: [
-    'vue-select/dist/vue-select.css'
   ],
   /*
   ** Nuxt.js modules

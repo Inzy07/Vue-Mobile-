@@ -1,11 +1,10 @@
 <template>
-  <section>
+  <v-ons-page>
     <the-header />
     <nuxt nuxt-child-key="none" role="main" />
     <the-footer />
-  </section>
+  </v-ons-page>
 </template>
-
 <script>
 import TheHeader from "@/components/header";
 import TheFooter from "@/components/footer";
@@ -29,3 +28,6 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+@import "../assets/scss/style.scss";
+</style>

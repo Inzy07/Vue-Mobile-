@@ -1,9 +1,9 @@
 <template>
-  <section>
+ <v-ons-page>
     <the-header />
     <nuxt nuxt-child-key="none" role="main" />
     <the-footer />
-  </section>
+ </v-ons-page>
 </template>
 
 <script>

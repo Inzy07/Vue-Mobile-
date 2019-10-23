@@ -7,7 +7,7 @@ export default {
       { property: 'twitter:site', content: '@nuxt_js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicons.ico' },
       { rel: 'dns-prefetch', href: 'https://fam-erp.com' },
       { rel: 'preconnect', href: 'https://fam-erp.com' }
     ]
@@ -49,6 +49,7 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
+    'nuxt-onsenui-module'
   ],
   "google-gtag": {
     id: "UA-96163372-1", // required

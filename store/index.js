@@ -2,8 +2,6 @@ import Vue from 'vue';
 import { CancelToken } from 'axios';
 import { validFeeds, config } from '~/common/api';
 import { lazy } from '~/common/utils';
-import Vuelidate from "vuelidate";
-import VuelidateErrorExtractor, { templates } from "vuelidate-error-extractor"
 // Learn more on https://nuxtjs.org/guide/vuex-store
 
 // =================================================
@@ -141,21 +139,7 @@ export const actions = {
   }
 }
 
-Vue.use(Vuelidate);
-Vue.use(VuelidateErrorExtractor, {
-  // Define common validation messages.
-  messages: {
-    required: "{attribute} is required!",
-    email: "{attribute} is not a valid Email address.",
-    phoneValid: "{attribute} is not a valid",
-  },
-  attributes: {
-    name: "Name",
-    email: "Email",
-    phone: "Phone",
-    message: "Message"
-  }
-});
+
 
 
 

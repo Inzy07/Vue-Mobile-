@@ -40,10 +40,61 @@ body {
 .active-color{
   color:#e9222f !important;
 }
+
+/*=============
+HOME CSS STARTS
+===============*/
 .logo img{
     margin: 4px;
 }
 .home-search .home-search-field{
     width: 94%;
     margin: 15px 3%;
+}
+.home-list{
+    background-color: transparent !important;
+}
+.home-list .list-item{
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.home-list .thumbnail{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 2px #e0e0e0;
+    border-radius: 50%;
+    margin: 13px 10px 0 0;
+    padding: 0;
+    min-width: 45px;
+    min-height: 45px;
+}
+.home-list .list-item__title{
+    font-weight: 600;
+}
+.home-list .list-item__subtitle{
+    color: #ad8f8f;
+    opacity: 1;
+}
+
+
+/*===============
+FOOTER CSS STARTS
+=================*/
+.footer-tab .tabbar--material{
+    background-color: #e0e0e0;
+    box-shadow:0 0 5px 1px rgba(0, 0, 0, .3) !important;
+}
+.footer-tab .tabbar--material .tabbar__icon .fa-home{
+    color: #303030;
+}
+.footer-tab .tabbar--material .tabbar__icon .fa-search{
+    color:#e9222f !important;
+}
+.footer-tab .tabbar--material .tabbar__icon .fa-whatsapp{
+    color:#26af36 !important;
 }

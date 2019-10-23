@@ -1,5 +1,5 @@
 <template>
-<v-ons-tabbar position="bottom"  :on-swipe="onSwipe" swipeable  :tabs="tabs"  @postchange="showTip($event, 'Tip: Try swiping pages!')"></v-ons-tabbar>
+<v-ons-tabbar position="bottom" swipeable class="footer-tab"  :tabs="tabs"  @postchange="showTip($event, 'Tip: Try swiping pages!')"></v-ons-tabbar>
 </template>
 <script>
 import Home from './Home.vue';
@@ -21,7 +21,7 @@ export default {
           page: Forms,
         },
         {
-          icon: 'heart',
+          icon: 'whatsapp',
           page: Animations,
         }
       ]

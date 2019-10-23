@@ -1,39 +1,9 @@
 <template>
   <v-ons-page>
-
     <v-ons-list>
-      <v-ons-list-header>Text input</v-ons-list-header>
       <v-ons-list-item >
-        <div class="left">
-          <v-ons-icon icon="md-face" class="list-item__icon"></v-ons-icon>
-        </div>
-        <label class="center">
-          <v-ons-input float maxlength="20"
-            placeholder="Name"
-            v-model="name"
-          >
-          </v-ons-input>
-        </label>
+        <v-ons-search-input class="home-search-field" style="width:96%" placeholder="Search Location/Developer"></v-ons-search-input>
       </v-ons-list-item>
-      <v-ons-list-item >
-        <div class="left">
-          <v-ons-icon icon="fa-question-circle-o" class="list-item__icon"></v-ons-icon>
-        </div>
-        <label class="center">
-          <v-ons-search-input maxlength="20"
-            placeholder="Search"
-            v-model="name"
-          >
-          </v-ons-search-input>
-        </label>
-      </v-ons-list-item>
-      <v-ons-list-item>
-        <div class="right right-label">
-          Hello {{ name || 'anonymous' }}!<v-ons-icon icon="fa-hand-spock-o" size="lg" class="right-icon"></v-ons-icon>
-        </div>
-      </v-ons-list-item>
-
-      <v-ons-list-header>Range slider</v-ons-list-header>
       <v-ons-list-item>
         Adjust the volume:
         <v-ons-row>
@@ -41,9 +11,7 @@
             <v-ons-icon icon="md-volume-down"></v-ons-icon>
           </v-ons-col>
           <v-ons-col>
-
             <v-ons-range v-model="volume" style="width: 100%;"></v-ons-range>
-
           </v-ons-col>
           <v-ons-col width="40px" style="text-align: center; line-height: 31px;">
             <v-ons-icon icon="md-volume-up"></v-ons-icon>
@@ -93,11 +61,7 @@
         :modifier="($index === vegetables.length - 1) ? 'longdivider' : ''"
       >
         <label class="left">
-          <v-ons-radio
-            :input-id="'radio-' + $index"
-            :value="vegetable"
-            v-model=" selectedVegetable"
-          >
+          <v-ons-radio :input-id="'radio-' + $index" :value="vegetable" v-model=" selectedVegetable" >
           </v-ons-radio>
         </label>
         <label :for="'radio-' + $index" class="center">

@@ -27,6 +27,13 @@ export const state = () => {
     leadpretext: '',
     channel: 550,
     config: config,
+    splitter: {
+      strict: true,
+      namespaced: true,
+      state: {
+        open: false
+      }
+    },
   }
 
   validFeeds.forEach((feed) => {
@@ -69,6 +76,13 @@ export const mutations = {
   },
   SET_PROPERTY: (state, { id, items }) => {
     Vue.set(state.properties, id, items || false) /* false means user not found */
+  },
+  toggle(state, shouldOpen) {
+    if (typeof shouldOpen === 'boolean') {
+      state.open = shouldOpen;
+    } else {
+      state.open = !state.open;
+    }
   }
 }
 // =================================================

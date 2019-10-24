@@ -10,7 +10,7 @@
           </v-ons-select>
         </div>
         </v-ons-list-item>
-        <div style="width:45%;float:left;margin:10px 0 0 15px;" v-for="(propcat, $index) in propcats" :key="propcat" tappable>
+        <div class="form-checkbox" v-for="(propcat, $index) in propcats" :key="propcat" tappable>
         <label class="left">
         <v-ons-radio :input-id="'radio-' + $index" :value="propcat" v-model=" selectedpropcat">
         </v-ons-radio>
@@ -19,7 +19,7 @@
             {{ propcat }}
         </label>
         </div>
-        <div style="width:25%;float:left;margin:10px 0 0 15px;" v-for="(propstatus, $index) in propstatuss" :key="propstatus" tappable>
+        <div class="form-status-checkbox" v-for="(propstatus, $index) in propstatuss" :key="propstatus" tappable>
         <label class="left">
         <v-ons-radio :input-id="'radio-' + $index" :value="propstatus" v-model=" selectedpropstatus">
         </v-ons-radio>

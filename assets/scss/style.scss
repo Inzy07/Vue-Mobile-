@@ -80,7 +80,31 @@ HOME CSS STARTS
     color: #ad8f8f;
     opacity: 1;
 }
-
+/*======================
+FORM CHECKBOX CSS STARTS
+========================*/
+.form-checkbox{
+    width: 42%;
+    float: left;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+    border-style: solid;
+    border-width: 1px .5px 1px 1px;
+    border-color: red;
+    margin: 10px 0 10px 15px;
+}
+.form-status-checkbox{
+    width: 26.5%;
+    float: left;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0 0 15px;
+    background: #fff;
+    border-style: solid;
+    border-width: 1px .5px 1px 1px;
+    border-color: red;
+}
 
 /*===============
 FOOTER CSS STARTS

@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page>
+<v-ons-page>
   <div class="home-search">
     <v-ons-search-input class="home-search-field" placeholder="Search Location/Developer"></v-ons-search-input>
   </div>
@@ -65,7 +65,6 @@
 export default {
   data () {
     return {
-
     };
   },
   methods: {

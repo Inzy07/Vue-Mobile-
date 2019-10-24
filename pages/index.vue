@@ -1,5 +1,6 @@
 <template>
-<v-ons-tabbar position="bottom" swipeable class="footer-tab"  :tabs="tabs"  @postchange="showTip($event, 'Tip: Try swiping pages!')"></v-ons-tabbar>
+<v-ons-tabbar position="bottom" ripple swipeable class="footer-tab"  :tabs="tabs"  @postchange="showTip($event, 'Tip: Try swiping pages!')">
+</v-ons-tabbar>
 </template>
 <script>
 import Home from './Home.vue';
@@ -33,7 +34,7 @@ export default {
         this.showingTip = true;
         this.$ons.notification.toast({
           message,
-          buttonLabel: 'Shut up!',
+          buttonLabel: 'Hide!',
           timeout: 2000
         }).then(i => {
           this.shutUp = i === 0;

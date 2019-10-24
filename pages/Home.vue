@@ -4,7 +4,7 @@
     <v-ons-search-input class="home-search-field" placeholder="Search Location/Developer"></v-ons-search-input>
   </div>
   <v-ons-list class="home-list">
-    <v-ons-list-item modifier="chevron">
+    <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
      <svg role="img" width="25px" height="25px">
         <use xlink:href="~/static/images/defs.svg#icon-handover-o"></use>
@@ -15,7 +15,7 @@
     <span class="list-item__subtitle">29,890 properties</span>
     </div>
     </v-ons-list-item>
-    <v-ons-list-item modifier="chevron">
+    <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
       <v-ons-icon style="color:#5da7a6" icon="home" class="list-item__icon"></v-ons-icon>
     </div>
@@ -24,7 +24,7 @@
     <span class="list-item__subtitle">35,710 properties</span>
     </div>
     </v-ons-list-item>
-    <v-ons-list-item modifier="chevron">
+    <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
       <svg role="img" width="25px" height="25px">
         <use xlink:href="~/static/images/defs.svg#icon-underconstruction"></use>
@@ -35,7 +35,7 @@
     <span class="list-item__subtitle">112,060 properties</span>
     </div>
     </v-ons-list-item>
-    <v-ons-list-item modifier="chevron">
+    <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
       <svg role="img" width="25px" height="25px">
         <use xlink:href="~/static/images/defs.svg#img-luxury"></use>
@@ -46,7 +46,7 @@
     <span class="list-item__subtitle">5,110 properties</span>
     </div>
     </v-ons-list-item>
-    <v-ons-list-item modifier="chevron">
+    <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
       <svg role="img" width="25px" height="25px">
         <use xlink:href="~/static/images/defs.svg#icon-list-sell"></use>

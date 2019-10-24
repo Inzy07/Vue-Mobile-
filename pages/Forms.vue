@@ -1,124 +1,102 @@
 <template>
-  <v-ons-page>
+<v-ons-page>
     <v-ons-list>
-      <v-ons-list-item >
-        <v-ons-search-input class="home-search-field" style="width:96%" placeholder="Search Location/Developer"></v-ons-search-input>
-      </v-ons-list-item>
-      <v-ons-list-item>
-        Adjust the volume:
-        <v-ons-row>
-          <v-ons-col width="40px" style="text-align: center; line-height: 31px;">
-            <v-ons-icon icon="md-volume-down"></v-ons-icon>
-          </v-ons-col>
-          <v-ons-col>
-            <v-ons-range v-model="volume" style="width: 100%;"></v-ons-range>
-          </v-ons-col>
-          <v-ons-col width="40px" style="text-align: center; line-height: 31px;">
-            <v-ons-icon icon="md-volume-up"></v-ons-icon>
-          </v-ons-col>
-        </v-ons-row>
-        Volume: {{ volume }} <span v-show="Number(volume) > 80">&nbsp;(careful, that's loud)</span>
-      </v-ons-list-item>
-
-      <v-ons-list-header>Switches</v-ons-list-header>
-      <ons-list-item>
-        <label class="center" for="switch1">
-          Switch ({{ switchOn ? 'on' : 'off' }})
-        </label>
-        <div class="right">
-          <v-ons-switch input-id="switch1" v-model="switchOn">
-          </v-ons-switch>
-        </div>
-      </ons-list-item>
-      <ons-list-item>
-        <label class="center" for="switch2">
-          {{ switchOn ? 'Enabled switch' : 'Disabled switch' }}
-        </label>
-        <div class="right">
-          <v-ons-switch input-id="switch2" :disabled="!switchOn">
-          </v-ons-switch>
-        </div>
-      </ons-list-item>
-
-      <v-ons-list-header>Select</v-ons-list-header>
-      <ons-list-item>
-        <div class="center">
-          <v-ons-select style="width: 120px" v-model="selectedItem">
-            <option v-for="item in items" :value="item.value">
-              {{ item.text }}
-            </option>
+        <v-ons-list-item>
+            <v-ons-search-input class="home-search-field" style="width:95%" placeholder="Search Location/Developer"></v-ons-search-input>
+        </v-ons-list-item>
+        <v-ons-list-item>
+          <v-ons-select v-model="propType" style="width:95%">
+            <option v-for="item in items" :value="item.value">{{ item.text }}</option>
           </v-ons-select>
-
         </div>
-        <div class="right right-label">
-          <s v-show="selectedItem !== 'Vue'">{{ selectedItem }}</s> Vue is awesome!
-        </div>
-      </ons-list-item>
-
-      <v-ons-list-header>Radio buttons</v-ons-list-header>
-      <v-ons-list-item v-for="(vegetable, $index) in vegetables" :key="vegetable"
-        tappable
-        :modifier="($index === vegetables.length - 1) ? 'longdivider' : ''"
-      >
+        </v-ons-list-item>
+        <div style="width:45%;float:left;margin:10px 0 0 15px;" v-for="(propcat, $index) in propcats" :key="propcat" tappable>
         <label class="left">
-          <v-ons-radio :input-id="'radio-' + $index" :value="vegetable" v-model=" selectedVegetable" >
-          </v-ons-radio>
+        <v-ons-radio :input-id="'radio-' + $index" :value="propcat" v-model=" selectedpropcat">
+        </v-ons-radio>
         </label>
         <label :for="'radio-' + $index" class="center">
-          {{ vegetable }}
+            {{ propcat }}
         </label>
-      </v-ons-list-item>
-      <v-ons-list-item>
-        <div class="center">
-          I love {{ selectedVegetable }}!
         </div>
-      </v-ons-list-item>
-
-      <v-ons-list-header>Checkboxes - {{checkedColors}}</v-ons-list-header>
-      <v-ons-list-item v-for="(color, $index) in colors" :key="color" tappable>
+        <div style="width:25%;float:left;margin:10px 0 0 15px;" v-for="(propstatus, $index) in propstatuss" :key="propstatus" tappable>
         <label class="left">
-          <v-ons-checkbox
-            :input-id="'checkbox-' + $index"
-            :value="color"
-            v-model="checkedColors"
-          >
-          </v-ons-checkbox>
+        <v-ons-radio :input-id="'radio-' + $index" :value="propstatus" v-model=" selectedpropstatus">
+        </v-ons-radio>
         </label>
-        <label class="center" :for="'checkbox-' + $index">
-          {{ color }}
+        <label :for="'radio-' + $index" class="center">
+            {{ propstatus }}
         </label>
-      </v-ons-list-item>
+        </div>
+        <v-ons-list-item>
+            Price Range
+            <v-ons-row>
+                <v-ons-col>
+                <v-ons-range Min="1" Max="5000000" v-model="price" style="width: 95%;"></v-ons-range>
+                </v-ons-col>
+            </v-ons-row>
+            Price Range: {{ price }} AED
+        </v-ons-list-item>
+        <v-ons-list-item>
+            Bedroom
+            <v-ons-row>
+                <v-ons-col width="40px" style="text-align: center; line-height: 31px;">
+                Min
+                </v-ons-col>
+                <v-ons-col width="40px" style="text-align: center; line-height: 31px;">
+                Max
+                </v-ons-col>
+            </v-ons-row>
+        </v-ons-list-item>
+        <v-ons-list-item>
+            Size Range
+            <v-ons-row>
+                <v-ons-col>
+                <v-ons-range Min="600" Max="5000" v-model="size" style="width: 95%;"></v-ons-range>
+                </v-ons-col>
+            </v-ons-row>
+            Size Range: {{ size }} Sq.ft
+        </v-ons-list-item>
+        <v-ons-list-header>Features</v-ons-list-header>
+        <v-ons-list-item v-for="(feature, $index) in features" :key="feature" tappable>
+            <label class="left">
+            <v-ons-checkbox :input-id="'checkbox-' + $index" :value="feature" v-model="feat">
+            </v-ons-checkbox>
+            </label>
+            <label class="center" :for="'checkbox-' + $index">
+            {{ feature }}
+            </label>
+        </v-ons-list-item>
+        <v-ons-list-item>
+            <v-ons-button modifier="large" style="margin: 6px 0;background:red;">Submit</v-ons-button>
+        </v-ons-list-item>
     </v-ons-list>
-  </v-ons-page>
+</v-ons-page>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      name: '',
-      switchOn: true,
-      items: [
-        { text: 'Vue', value: 'Vue' },
-        { text: 'React', value: 'React' },
-        { text: 'Angular', value: 'Angular' }
+    items: [
+        { text: 'Apartment', value: 'apartment' },
+        { text: 'Villas', value: 'villas' },
+        { text: 'Townhouse', value: 'townhouse' },
+        { text: 'Offices', value: 'offices' },
+        { text: 'Plots', value: 'plots' },
+        { text: 'Commercial', value: 'commercial' }
       ],
-      selectedItem: 'Vue',
-      vegetables: ['Apples', 'Bananas', 'Oranges'],
-      selectedVegetable: 'Bananas',
-      colors: ['Red', 'Green', 'Blue'],
-      checkedColors: ['Green', 'Blue'],
-      volume: 25
+      propType:'apartment',
+      name: '',
+      features:['Pet Allowed', 'Pool','Balcony', 'Waterfront','Study', 'Beach access','Maid', 'Landmark view','Gym', 'Furnished','Kitchen appliance'],
+      feat: [],
+      size: 0,
+      price: 0,
+      propcats: ['Sale','Rent'],
+      selectedpropcat: 'Sale',
+      propstatuss: ['All','Ready','Offplan'],
+      selectedpropstatus: 'All'
     };
   }
 };
 </script>
-
-<style scoped>
-.right-icon {
-  margin-left: 10px;
-}
-.right-label {
-  color: #666;
-}
-</style>

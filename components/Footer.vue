@@ -1,18 +1,19 @@
 <template>
-</template>
 
+</template>
 <script>
-import { config } from "~/common/api";
 export default {
   name: "TheFooter",
-  data() {
+  data () {
     return {
-      config: config
+
     };
   },
   methods: {
+
+  },
+  computed: {
+
   }
 };
 </script>
-
-

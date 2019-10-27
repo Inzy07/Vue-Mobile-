@@ -5,7 +5,7 @@
 <script>
 import Home from './Home.vue';
 import Forms from './Forms.vue';
-import Animations from './Animations.vue';
+import Listings from './Listings.vue';
 export default {
   name: "TheHeader",
   data () {
@@ -23,7 +23,7 @@ export default {
         },
         {
           icon: 'whatsapp',
-          page: Animations,
+          page: Listings,
         }
       ]
     };

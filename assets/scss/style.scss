@@ -40,6 +40,9 @@ body {
 .active-color{
   color:#e9222f !important;
 }
+.green-color{
+    color:#26af36 !important;
+}
 
 /*=============
 HOME CSS STARTS
@@ -106,6 +109,67 @@ FORM CHECKBOX CSS STARTS
     border-color: red;
 }
 
+/*================
+Gallery CSS Starts
+==================*/
+.listing-bg{
+    padding: 0 !important;
+    margin-bottom: 15px !important;
+}
+.listing-bg .content .title,
+.listing-bg .content .highlts{
+    padding:0  16px !important;
+}
+.listing-bg .content .title h3 {
+    color: #2CA2AF;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin:5px 0 0 0;
+}
+.listing-bg .content .title h3 sup {
+    font-size: 65%;
+}
+.listing-bg .content .title h4{
+    color: #000;
+    font-weight: 600;
+    margin:0;
+}
+.listing-bg .content .title p{
+    font-size: 1.1rem;
+    margin:0;
+}
+
+.listing-bg .highlts div{
+    padding: 10px 6px 0 6px;
+    color: #000;
+    font-size: 1rem;
+    display: inline-block;
+}
+.listing-bg .highlts div .fa{
+    padding-right: 2px;
+    color: rgba(0, 0, 0, .54);
+}
+.listing-bg .call-to-actions-btns{
+    margin-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+.listing-bg .call-to-actions-btns .button {
+    display: inline-block;
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+    width: 32%;
+    border-right: 1px solid #e0e0e0;
+    border-radius: 0;
+    padding: 5px 0;
+}
+.listing-bg .call-to-actions-btns .button:last-child {
+    border-right: 0px solid #e0e0e0;
+}
+.listing-bg .call-to-actions-btns .button .ons-icon{
+    padding-right: 5px;
+    font-size: medium;
+}
 /*===============
 FOOTER CSS STARTS
 =================*/

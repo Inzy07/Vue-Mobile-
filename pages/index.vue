@@ -5,7 +5,6 @@
 <script>
 import Home from './Home.vue';
 import Forms from './Forms.vue';
-import Listings from './Listings.vue';
 export default {
   name: "TheHeader",
   data () {
@@ -20,10 +19,6 @@ export default {
         {
           icon: 'search',
           page: Forms,
-        },
-        {
-          icon: 'whatsapp',
-          page: Listings,
         }
       ]
     };
@@ -41,7 +36,7 @@ export default {
           this.showingTip = false;
         });
       }
-    }
+    },
   },
   computed: {
 

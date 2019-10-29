@@ -1,5 +1,6 @@
 <template>
   <v-ons-page>
+   <nuxt-link to="_id">
    <v-ons-card class="listing-bg">
       <img src="~/static/images/gallery/golf1.jpg" style="width: 100%">
       <div class="content">
@@ -20,6 +21,7 @@
       </div>
       </div>
     </v-ons-card>
+    </nuxt-link
     <v-ons-card class="listing-bg">
       <img src="~/static/images/gallery/golf1.jpg" style="width: 100%">
       <div class="content">

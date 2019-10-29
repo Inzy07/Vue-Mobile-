@@ -4,6 +4,7 @@
     <v-ons-search-input class="home-search-field" placeholder="Search Location/Developer"></v-ons-search-input>
   </div>
   <v-ons-list class="home-list">
+    <nuxt-link to='Listings'>
     <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
      <svg role="img" width="25px" height="25px">
@@ -15,6 +16,7 @@
     <span class="list-item__subtitle">29,890 properties</span>
     </div>
     </v-ons-list-item>
+    </nuxt-link>
     <v-ons-list-item modifier="chevron" ripple>
     <div class="left thumbnail">
       <v-ons-icon style="color:#5da7a6" icon="home" class="list-item__icon"></v-ons-icon>

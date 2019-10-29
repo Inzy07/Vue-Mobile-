@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { CancelToken } from 'axios';
+import onsenjs from './onsenjs';
 import { validFeeds, config } from '~/common/api';
 import { lazy } from '~/common/utils';
 // Learn more on https://nuxtjs.org/guide/vuex-store
@@ -27,13 +28,6 @@ export const state = () => {
     leadpretext: '',
     channel: 550,
     config: config,
-    splitter: {
-      strict: true,
-      namespaced: true,
-      state: {
-        open: false
-      }
-    },
   }
 
   validFeeds.forEach((feed) => {
@@ -76,13 +70,6 @@ export const mutations = {
   },
   SET_PROPERTY: (state, { id, items }) => {
     Vue.set(state.properties, id, items || false) /* false means user not found */
-  },
-  toggle(state, shouldOpen) {
-    if (typeof shouldOpen === 'boolean') {
-      state.open = shouldOpen;
-    } else {
-      state.open = !state.open;
-    }
   }
 }
 // =================================================
@@ -152,10 +139,4 @@ export const actions = {
     )
   }
 }
-
-
-
-
-
-
 
